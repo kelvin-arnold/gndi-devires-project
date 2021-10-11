@@ -91,24 +91,86 @@ twin.macro: [https://blog.formpl.us/twin-macro-tutorial-for-beginners-styling-wi
 
 classnames: [https://www.npmjs.com/package/classnames](https://www.npmjs.com/package/classnames)
 
-### Scripts
+---
 
-Rodar o seguinte comando para instalar a versão do node  
-`nvm use`
+## Scripts
 
-Para instalar todos as livrarias  
-`iyarn nstall:clean`
+Rodar o seguinte comando para instalar a versão do node
 
-Para rodar o projeto  
-`yarn start`
+```
+nvm use
+```
 
-Generar um componente  
-`yarn generate:component ui|component|page NAME_COMPONENT`
+Para instalar todos as livrarias
 
-### Fora do escopo
+```
+yarn install:clean
+```
+
+Para rodar o projeto
+
+```
+yarn start
+```
+
+Generar um componente
+
+```
+Script
+yarn generate:component ui|component|page NAME_COMPONENT
+
+Exemplo
+yarn generate:component ui Button
+```
+
+---
+
+## Git Rules
+
+### Branch
+
+utilizaremos duas branchs:
+`master` para manter o código final
+`develop` para trabalho de desenvolvimento
+
+### Tasks
+
+Para cada nova task/feature temos que criar uma branch nova a partir da `branch develop` e apos finalizar com o desenvolvimento da Task/Feature faremos um PR(Pull Request) para a `branch develop`. Logo podemos solicitar alguem do time fazer a validação do código e mergear a branchs.
+
+```
+Script
+git checkout -b TASK/NUMERO_TASK
+
+Exemplo
+git checkout -b TASK/01
+```
+
+### Commits
+
+O projeto implementou a regras de commits utilizando commitlint.
+Todo commit precisa ter o seguinte formato:
+
+```
+Script
+git commit -m "TASK-YOUR_TASK_NUMBER: YOUR_DESCRIPTIO"
+
+Exemplo
+git commit -m "TASK-01: Border do Button atualizado"
+
+```
+
+---
+
+## Fora do escopo
 
 O que não está contemplado para o desenvolvimento da plataforma
 
 - Suporte 100% para dispositivos mobile
 - i18n: suporte a multiples idiomas
 - Animações complejas
+
+---
+
+## Links de apoio
+
+Design system [Figma](https://xd.adobe.com/view/2435038f-f4a0-48b3-9fcd-42d64e0436bd-7166/)

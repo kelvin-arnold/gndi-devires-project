@@ -15,8 +15,8 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 		setSession({userName: "devires@user"}, "deviresTokenAccess", "deviresRefreshToken");
 	return (
 		<AuthSigninWrapper {...args}>
-			<span className="text-xl font-medium mb-2">Sign in</span>
-			<span className="mb-4">Sign in description</span>
+			<span className="prose prose-xl mb-2">Sign in</span>
+			<span className="prose mb-4">Sign in description</span>
 			<UIButton label="Sign in" onClick={login} />
 		</AuthSigninWrapper>
 	);

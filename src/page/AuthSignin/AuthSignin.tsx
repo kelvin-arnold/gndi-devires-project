@@ -2,7 +2,7 @@
 import React from "react";
 import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
-import {UIButton} from "./../../ui";
+import {UIButton, UIText} from "./../../ui";
 import {AuthContext} from "./../../context/AuthContext";
 
 export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
@@ -17,6 +17,7 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 		<AuthSigninWrapper {...args}>
 			<span className="text-xl font-medium mb-2">Sign in</span>
 			<span className="mb-4">Sign in description</span>
+			<UIText>My Text</UIText>
 			<UIButton label="Sign in" onClick={login} />
 		</AuthSigninWrapper>
 	);

@@ -91,6 +91,8 @@ twin.macro: [https://blog.formpl.us/twin-macro-tutorial-for-beginners-styling-wi
 
 classnames: [https://www.npmjs.com/package/classnames](https://www.npmjs.com/package/classnames)
 
+Tailwind/typography: [https://github.com/tailwindlabs/tailwindcss-typography](https://github.com/tailwindlabs/tailwindcss-typography)
+
 ---
 
 ## Scripts

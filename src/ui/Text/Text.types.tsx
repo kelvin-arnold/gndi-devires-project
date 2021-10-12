@@ -1,15 +1,15 @@
 // Component generated with util/vox-create-component.js
 export enum Preset {
-	BODY_SM, // Body 02
+	BODY_02, // Body 02
 	BODY, // Body
-	BUTTON_SM, // Button 02
+	BUTTON_02, // Button 02
 	BUTTON, // Button
-	HEADLINE_XS, //  Headline 06
-	HEADLINE_SM, //  Headline 05
+	HEADLINE_06, //  Headline 06
+	HEADLINE_05, //  Headline 05
 	HEADLINE, //  Headline 04
-	HEADLINE_LG, // Headline 03
-	HEADLINE_XL, // Headline 02
-	HEADLINE_XXL, // Headline 01,
+	HEADLINE_03, // Headline 03
+	HEADLINE_02, // Headline 02
+	HEADLINE_01, // Headline 01,
 	SUBTITLE, // Subtitle
 }
 
@@ -19,6 +19,7 @@ export enum Color {
 	DANGER,
 	GREY,
 	WHITE,
+	DARK,
 }
 
 export type TextProps = {

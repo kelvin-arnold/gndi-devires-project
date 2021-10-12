@@ -4,17 +4,17 @@ import tw from "twin.macro";
 import {preset} from "./Button.types";
 import classNames from "classnames";
 
-type IButtonProps = {
+type ButtonProps = {
 	bp: keyof typeof preset;
 };
 /**
  * Components
  */
-export const ButtonWrapper = styled.button.attrs<IButtonProps>(({bp}) => {
+export const ButtonWrapper = styled.button.attrs<ButtonProps>(({bp}) => {
 	const className = classNames({
 		"py-2 px-4 rounded": true,
-		"bg-primary hover:bg-primary-light": bp === "default",
-		"bg-red hover:bg-red-light": bp === "danger",
+		"bg-primary hover:bg-primary-light": bp === "DEFAULT",
+		"bg-red hover:bg-red-light": bp === "DANGER",
 	});
 	return {
 		className,

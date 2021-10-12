@@ -1,10 +1,10 @@
 // Component generated with util/vox-create-component.js
 export enum preset {
-	default,
-	primary,
-	secondary,
-	dark,
-	danger,
+	DEFAULT,
+	PRIMARY,
+	SECONDARY,
+	DARK,
+	DANGER,
 }
 export type ButtonProps = {
 	// Required

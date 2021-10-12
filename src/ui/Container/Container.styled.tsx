@@ -5,5 +5,5 @@ import styled from "styled-components";
  * Components
  */
 export const ContainerWrapper = styled.div.attrs({
-	className: "container bg-primary",
+	className: "container",
 })``;

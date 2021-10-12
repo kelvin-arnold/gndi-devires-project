@@ -100,6 +100,11 @@ module.exports = {
 						fontSize: "48px",
 					},
 				},
+				"4xl": {
+					css: {
+						fontSize: "60px",
+					},
+				},
 			},
 		},
 	},

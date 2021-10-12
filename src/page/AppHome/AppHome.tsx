@@ -15,7 +15,7 @@ export const AppHome: React.VFC<AppHomeProps> = ({...args}) => {
 		<AppHomeWrapper {...args}>
 			<span className="text-xl font-medium mb-2">Home</span>
 			<span className="mb-4">Home description</span>
-			<UIButton label="Logout" preset="danger" onClick={clearSession} />
+			<UIButton label="Logout" preset="DANGER" onClick={clearSession} />
 		</AppHomeWrapper>
 	);
 };

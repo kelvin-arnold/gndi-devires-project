@@ -3,7 +3,7 @@ import React from "react";
 import {ButtonWrapper} from "./Button.styled";
 import {ButtonProps} from "./Button.types";
 
-export const Button: React.VFC<ButtonProps> = ({label, onClick, preset = "default", ...args}) => {
+export const Button: React.VFC<ButtonProps> = ({label, onClick, preset = "DEFAULT", ...args}) => {
 	return (
 		<ButtonWrapper {...{onClick, bp: preset}} {...args}>
 			<span className="label">{label || "Button"}</span>

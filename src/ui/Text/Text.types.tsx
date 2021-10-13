@@ -1,5 +1,6 @@
 // Component generated with util/vox-create-component.js
 export enum Preset {
+	BODY_03, // Body 03
 	BODY_02, // Body 02
 	BODY, // Body
 	BUTTON_02, // Button 02
@@ -20,6 +21,7 @@ export enum Color {
 	GREY,
 	WHITE,
 	DARK,
+	INHERIT,
 }
 
 export type TextProps = {

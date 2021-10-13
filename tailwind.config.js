@@ -14,6 +14,7 @@ module.exports = {
 		},
 		colors: {
 			transparent: "transparent",
+			current: "inherit",
 			primary: {
 				light: "#EC802C",
 				DEFAULT: "#EC6E0C",
@@ -43,7 +44,9 @@ module.exports = {
 			sans: ["Oxygen", "sans-serif"],
 		},
 		spacing: {
+			0.5: "4px",
 			1: "8px",
+			1.5: "10px",
 			2: "12px",
 			3: "16px",
 			4: "24px",
@@ -65,6 +68,11 @@ module.exports = {
 		},
 		extend: {
 			typography: {
+				xs: {
+					css: {
+						fontSize: "12px",
+					},
+				},
 				sm: {
 					css: {
 						fontSize: "14px",

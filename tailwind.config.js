@@ -21,6 +21,7 @@ module.exports = {
 				dark: "#C65C0A",
 			},
 			secondary: {
+				light: "#FFF3CD",
 				DEFAULT: "#F49E00",
 			},
 			gray: {
@@ -39,6 +40,17 @@ module.exports = {
 			citrine: {
 				DEFAULT: "#F9EDD3",
 			},
+			black: {
+				DEFAULT: "#000000",
+			},
+			blue: {
+				light: "#E7F2F8",
+				DEFAULT: "#0B7EB5",
+			},
+			green: {
+				light: "#02910F1A",
+				DEFAULT: "#0B8A1C",
+			},
 		},
 		fontFamily: {
 			sans: ["Oxygen", "sans-serif"],
@@ -49,9 +61,12 @@ module.exports = {
 			1.5: "10px",
 			2: "12px",
 			3: "16px",
-			4: "24px",
-			5: "32px",
-			6: "48px",
+			4: "20px",
+			5: "24px",
+			6: "28px",
+			6.5: "30px",
+			7: "32px",
+			8: "48px",
 		},
 		borderRadius: {
 			none: "0",

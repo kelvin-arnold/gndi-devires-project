@@ -4,7 +4,6 @@ import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
 import {UIButton, UIBadge, UIICon, UIText} from "./../../ui";
 import {AuthContext} from "./../../context/AuthContext";
-import {ReactComponent as AddCircle} from "./../../assets/icons/add_circle.svg";
 
 export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 	// Context Here

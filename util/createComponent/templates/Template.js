@@ -9,7 +9,7 @@ export const ${componentName}: React.VFC<${componentName}Props> = ({...args}) =>
 	// States Here
 	// Effects Here
 	// Handlers Here
-  return (
+	return (
 		<${componentName}Wrapper {...args}>
 			<span>${componentName}</span>
 		</${componentName}Wrapper>

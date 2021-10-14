@@ -27,6 +27,7 @@ module.exports = {
 			gray: {
 				lightest: "#F5F5F5",
 				light: "#5B5B5F",
+				disabled: "#BCBCBC",
 				DEFAULT: "#3C393C",
 				dark: "#1A171B",
 			},
@@ -67,6 +68,13 @@ module.exports = {
 			6.5: "30px",
 			7: "32px",
 			8: "48px",
+			32: "128px",
+			44: "176px",
+		},
+		minWidth: {
+			0: "0",
+			"1/2": "50%",
+			button: "176px",
 		},
 		borderRadius: {
 			none: "0",

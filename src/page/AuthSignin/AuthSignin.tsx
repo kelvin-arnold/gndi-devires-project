@@ -21,18 +21,35 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 						1
 					</UIBadge>
 					<UIText preset="BODY_02">Tipografia body 02</UIText>
-					<UIICon name="addCircle" size="sm" />
-					<UIICon name="addCircle" size="md" />
-					<UIICon name="addCircle" size="md" color="SECONDARY" />
-					<UIICon name="addCircle" size="md" color="WHITE" />
-					<UIICon name="addCircle" size="md" color="DANGER" />
-					<UIICon name="addCircle" size="md" color="GREY" />
-					<UIICon name="addCircle" size="md" color="DARK" />
-					<UIICon name="statusInfo" size="md" color="SECONDARY" />
-					<UIICon name="alert" size="md" color="BLUE" />
-					<UIICon name="checkFilled" size="md" color="GREEN" />
-					<UIICon name="errorFilled" size="md" color="DANGER" />
-					<UIICon name="order" />
+					<UIButton label="click" onClick={() => alert("click!")} />
+					<UIButton disabled label="click" onClick={() => alert("click!")} />
+					<UIButton icon="addCircle" label="click" onClick={() => alert("click!")} />
+					<UIButton disabled icon="addCircle" label="click" onClick={() => alert("click!")} />
+					<UIButton
+						icon="addCircle"
+						preset="SECONDARY"
+						label="click"
+						onClick={() => alert("click!")}
+					/>
+					<UIButton
+						disabled
+						icon="addCircle"
+						preset="SECONDARY"
+						label="click"
+						onClick={() => alert("click!")}
+					/>
+					<UIButton preset="LINK" label="click" onClick={() => alert("click!")} />
+					<UIButton disabled preset="LINK" label="click" onClick={() => alert("click!")} />
+					<UIButton icon="addCircle" preset="LINK" label="click" onClick={() => alert("click!")} />
+					<UIButton
+						disabled
+						icon="addCircle"
+						preset="LINK"
+						label="click"
+						onClick={() => alert("click!")}
+					/>
+					<UIButton label="click" preset="DANGER" onClick={() => alert("click!")} />
+					<UIButton label="click" preset="DARK" onClick={() => alert("click!")} />
 				</div>
 				<div className="mb-1">
 					<UIBadge color="DANGER" size="NORMAL">

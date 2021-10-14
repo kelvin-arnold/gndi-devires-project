@@ -21,7 +21,7 @@ module.exports = {
 				dark: "#C65C0A",
 			},
 			secondary: {
-				light: "#FFF3CD",
+				lightest: "#FFF3CD",
 				DEFAULT: "#F49E00",
 			},
 			gray: {
@@ -35,6 +35,7 @@ module.exports = {
 				DEFAULT: "#FFFFFF",
 			},
 			red: {
+				lightest: "#EC130F1A",
 				light: "#D9003C",
 				DEFAULT: "#BB0034",
 			},
@@ -45,11 +46,11 @@ module.exports = {
 				DEFAULT: "#000000",
 			},
 			blue: {
-				light: "#E7F2F8",
+				lightest: "#E7F2F8",
 				DEFAULT: "#0B7EB5",
 			},
 			green: {
-				light: "#02910F1A",
+				lightest: "#02910F1A",
 				DEFAULT: "#0B8A1C",
 			},
 		},

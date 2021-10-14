@@ -84,7 +84,11 @@ module.exports = {
 		opacity: {
 			0: "0",
 			10: "0.1",
+			20: "0.2",
+			30: "0.3",
 			40: "0.4",
+			50: "0.5",
+			60: "0.6",
 			70: "0.7",
 		},
 		extend: {
@@ -138,7 +142,12 @@ module.exports = {
 		},
 	},
 	variants: {
-		extend: {},
+		extend: {
+			opacity: ["disabled"],
+			backgroundColor: ["disabled"],
+			borderColor: ["disabled"],
+			textColor: ["disabled"],
+		},
 	},
 	plugins: [require("@tailwindcss/typography")],
 };

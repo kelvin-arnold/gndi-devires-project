@@ -2,6 +2,7 @@
 import React from "react";
 import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
+import {CPNTextInput} from "./../../component";
 import {UIButton, UIBadge, UIICon, UIText} from "./../../ui";
 import {AuthContext} from "./../../context/AuthContext";
 
@@ -56,13 +57,26 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 						10
 					</UIBadge>
 				</div>
-				<div className="mb-1">
-					<UIBadge color="GRAY" size="MEDIUM">
-						Badge 1
-					</UIBadge>
+				<div className="flex flex-row gap-6 w-full ">
+					<div className="flex-1 w-full">
+						<CPNTextInput label="Text input" placeholder="Some placeholder" disabled />
+					</div>
+					<div className="flex-1 w-full">
+						<CPNTextInput label="Text input" placeholder="Some placeholder" disabled />
+					</div>
+				</div>
+				<div className="flex flex-row gap-6 w-full ">
+					<div className="flex-1 w-full">
+						<CPNTextInput label="Text input" />
+					</div>
+					<div className="flex-1 w-full">
+						<CPNTextInput label="Text input" />
+					</div>
 				</div>
 			</div>
-			<UIButton label="Sign in" onClick={login} />
+			<div className="mt-6">
+				<UIButton label="Sign in" onClick={login} />
+			</div>
 		</AuthSigninWrapper>
 	);
 };

@@ -2,7 +2,7 @@
 import React from "react";
 import {TextInputWrapper, Input} from "./TextInput.styled";
 import {TextInputProps} from "./TextInput.types";
-import {UIText, UIInputBase} from "./../../ui";
+import {UIText} from "./../../ui";
 
 export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 	({label, disabled, error, help, placeholder, type = "text", ...args}, ref) => {

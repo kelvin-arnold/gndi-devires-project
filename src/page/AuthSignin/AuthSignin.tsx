@@ -2,8 +2,8 @@
 import React from "react";
 import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
-import {UIButton} from "./../../ui";
 import {CPNTextInput} from "./../../component";
+import {UIButton, UIBadge, UIICon, UIText} from "./../../ui";
 import {AuthContext} from "./../../context/AuthContext";
 
 export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
@@ -16,22 +16,46 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 		setSession({userName: "devires@user"}, "deviresTokenAccess", "deviresRefreshToken");
 	return (
 		<AuthSigninWrapper {...args}>
-			<div className="flex flex-col gap-y-4 w-full">
-				<div className="flex flex-row gap-6 w-full ">
-					<div className="flex-1 w-full">
-						<CPNTextInput label="Text input" placeholder="Some placeholder" />
-					</div>
-					<div className="flex-1 w-full">
-						<CPNTextInput label="Text input" placeholder="Some placeholder" />
-					</div>
+			<div className="mb-4">
+				<div className="mb-1">
+					<UIBadge color="GRAY" size="SMALL">
+						1
+					</UIBadge>
+					<UIText preset="BODY_02">Tipografia body 02</UIText>
+					<UIButton label="click" onClick={() => alert("click!")} />
+					<UIButton disabled label="click" onClick={() => alert("click!")} />
+					<UIButton icon="addCircle" label="click" onClick={() => alert("click!")} />
+					<UIButton disabled icon="addCircle" label="click" onClick={() => alert("click!")} />
+					<UIButton
+						icon="addCircle"
+						preset="SECONDARY"
+						label="click"
+						onClick={() => alert("click!")}
+					/>
+					<UIButton
+						disabled
+						icon="addCircle"
+						preset="SECONDARY"
+						label="click"
+						onClick={() => alert("click!")}
+					/>
+					<UIButton preset="LINK" label="click" onClick={() => alert("click!")} />
+					<UIButton disabled preset="LINK" label="click" onClick={() => alert("click!")} />
+					<UIButton icon="addCircle" preset="LINK" label="click" onClick={() => alert("click!")} />
+					<UIButton
+						disabled
+						icon="addCircle"
+						preset="LINK"
+						label="click"
+						onClick={() => alert("click!")}
+					/>
+					<UIButton label="click" preset="DANGER" onClick={() => alert("click!")} />
+					<UIButton label="click" preset="DARK" onClick={() => alert("click!")} />
 				</div>
-				<div className="flex flex-row gap-6 w-full ">
-					<div className="flex-1 w-full">
-						<CPNTextInput label="Text input" placeholder="Some placeholder" error="Some error" />
-					</div>
-					<div className="flex-1 w-full">
-						<CPNTextInput label="Text input" placeholder="Some placeholder" error="Some error" />
-					</div>
+				<div className="mb-1">
+					<UIBadge color="DANGER" size="NORMAL">
+						10
+					</UIBadge>
 				</div>
 				<div className="flex flex-row gap-6 w-full ">
 					<div className="flex-1 w-full">

@@ -1,3 +1,5 @@
+import {icons} from "../../theme/icon";
+
 // Component generated with util/vox-create-component.js
 export enum preset {
 	DEFAULT,
@@ -5,6 +7,7 @@ export enum preset {
 	SECONDARY,
 	DARK,
 	DANGER,
+	LINK,
 }
 export type ButtonProps = {
 	// Required
@@ -12,4 +15,6 @@ export type ButtonProps = {
 	readonly onClick: () => void;
 	// Optional
 	readonly preset?: keyof typeof preset;
+	readonly disabled?: boolean;
+	readonly icon?: keyof typeof icons;
 };

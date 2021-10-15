@@ -27,7 +27,7 @@ export const ButtonWrapper = styled.button.attrs<ButtonProps>(({bp, disabled}) =
 	return {
 		className,
 	};
-})<{bp: keyof typeof preset}>`
+})<ButtonProps>`
 	& svg * {
 		fill: currentColor;
 	}

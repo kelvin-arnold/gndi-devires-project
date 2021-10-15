@@ -18,7 +18,9 @@ export const Button: React.VFC<ButtonProps> = ({
 					<UIICon name={icon} />
 				</div>
 			)}
-			<span className="label">{label || "Button"}</span>
+			<UIText preset="BUTTON" color="INHERIT">
+				{label || "Button"}
+			</UIText>
 		</ButtonWrapper>
 	);
 };

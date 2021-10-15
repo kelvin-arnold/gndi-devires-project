@@ -33,7 +33,7 @@ export const IconWrapper = styled.div.attrs<IconStyleProps>(({size, color}) => {
 		height: 30px;
 	}
 
-	&.fill-current svg path {
+	&.fill-current svg * {
 		fill: currentColor;
 	}
 `;

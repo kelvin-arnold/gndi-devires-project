@@ -1,11 +1,11 @@
 // Component generated with util/vox-create-component.js
 import React from "react";
-import {TextInputWrapper, Input} from "./TextInput.styled";
+import {TextInputWrapper, InputWrapper, Input, Icon} from "./TextInput.styled";
 import {TextInputProps} from "./TextInput.types";
-import {UIText} from "./../../ui";
+import {UIText, UIICon} from "./../../ui";
 
 export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
-	({label, disabled, error, help, placeholder, type = "text", ...args}, ref) => {
+	({label, disabled, error, help, placeholder, type = "text", icon, ...args}, ref) => {
 		// Context Here
 		// States Here
 		// Effects Here
@@ -19,7 +19,14 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 						</UIText>
 					</div>
 				)}
-				<Input {...{placeholder, type, disabled, error}} {...args} ref={ref} />
+				<InputWrapper>
+					<Input {...{placeholder, type, disabled, error}} {...args} ref={ref} />
+					{icon && (
+						<Icon>
+							<UIICon name="chevronDown" />
+						</Icon>
+					)}
+				</InputWrapper>
 				{error && (
 					<UIText preset="BODY_03" color="DANGER">
 						{error}

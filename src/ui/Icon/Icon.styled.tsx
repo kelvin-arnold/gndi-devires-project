@@ -10,6 +10,7 @@ export const IconWrapper = styled.div.attrs<IconStyleProps>(({size, color}) => {
 	const className = classnames({
 		"w-4 h-4 sm": size === "sm",
 		"w-6.5 h-6.5 md": size === "md",
+		"fill-current text-primary": color === "PRIMARY",
 		"fill-current text-secondary": color === "SECONDARY",
 		"fill-current text-white": color === "WHITE",
 		"fill-current text-red": color === "DANGER",

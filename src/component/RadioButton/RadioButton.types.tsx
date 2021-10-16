@@ -3,4 +3,5 @@ export type RadioButtonProps = {
 	onClick: () => void;
 	label: string;
 	name?: string;
+	checked?: boolean;
 };

@@ -13,7 +13,7 @@ export const SelectInputWrapper = styled.div.attrs({
 `;
 
 export const SelectInputOptions = styled.div.attrs({
-	className: "absolute rounded rounded-lg bg-white w-full shadow-md overflow-hidden",
+	className: "absolute rounded rounded-lg bg-white w-full shadow-md overflow-hidden z-20",
 })`
 	& .search {
 		${tw`px-3 pb-1 pt-2`};

@@ -1,7 +1,6 @@
 // Component generated with util/vox-create-component.js
-export type RadioButtonProps = {
+export type CheckBoxProps = {
 	label: string;
-	value: string;
-	name?: string;
+	value: any;
 	checked?: boolean;
 };

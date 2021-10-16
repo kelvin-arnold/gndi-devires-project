@@ -69,6 +69,7 @@ export const SelectInput = React.forwardRef<HTMLInputElement, SelectInputProps>(
 				ref.current.focus();
 				ref.current.setAttribute("value", opt.value);
 			}
+			setVisibleOptions(options);
 			toggleOptions();
 		};
 		const onSearch = (val: any) => {

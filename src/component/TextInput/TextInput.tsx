@@ -23,12 +23,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 					</div>
 				)}
 				<InputWrapper onClick={onClick}>
-					<Input
-						{...{placeholder, type, disabled, error}}
-						// onChange={(e) => (onChange ? onChange(e.currentTarget.value) : {})}
-						ref={ref}
-						{...args}
-					/>
+					<Input {...{placeholder, type, disabled, error}} ref={ref} {...args} />
 					{icon && (
 						<Icon>
 							<UIICon name={icon} />

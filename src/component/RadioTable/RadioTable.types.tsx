@@ -8,6 +8,7 @@ export type Option = {
 export type RadioTableProps = {
 	readonly title?: string;
 	readonly options?: Option[];
+	readonly name?: string;
 };
 
 export type RadioTableWrapperProps = {

@@ -20,7 +20,7 @@ export const Selected = styled.div.attrs({
 
 export const CustomInput = styled.div.attrs({
 	className:
-		"radio-button border border-gray-light border-opacity-60 w-4 h-4 rounded-full mr-2 flex justify-center items-center  select-none  cursor-pointer",
+		"radio-button border border-gray-light border-opacity-60 w-4 h-4 rounded-full mr-2 flex justify-center items-center select-none cursor-pointer",
 })``;
 
 export const Radio = styled.input.attrs({

@@ -2,7 +2,7 @@
 import React from "react";
 import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
-import {CPNSelectInput, CPNTextInput} from "./../../component";
+import {CPNSelectInput, CPNTextInput, CPNCheckBox} from "./../../component";
 import {UIButton} from "./../../ui";
 import {AuthContext} from "./../../context/AuthContext";
 import {useForm} from "react-hook-form";
@@ -12,16 +12,18 @@ import {yupResolver} from "@hookform/resolvers/yup";
 type AuthFormData = {
 	input1: string;
 	input2: string;
+	input3: string;
 };
 
 export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 	// Context Here
 	const {setSession} = React.useContext(AuthContext);
 	// Validations
-	const AuthFormValidation: SchemaOf<AuthFormData> = object().shape({
-		input1: string().required("1"),
-		input2: string().required("2"),
-	});
+	// const AuthFormValidation: SchemaOf<AuthFormData> = object().shape({
+	// 	input1: string().required("1"),
+	// 	input2: string().required("2"),
+	// 	input3: string().required("3"),
+	// });
 	// Form
 	const {
 		register,
@@ -45,6 +47,9 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 			</div>
 			<div className="mt-4 w-full">
 				<CPNSelectInput label="Select" placeholder="Selecione" {...register("input2")} />
+			</div>
+			<div className="mt-4 w-full">
+				<CPNCheckBox label="Check box" value="value" {...register("input3")} />
 			</div>
 			<div className="mt-6  w-full">
 				<UIButton label="Sign in" onClick={submit} />

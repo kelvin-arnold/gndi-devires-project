@@ -19,7 +19,7 @@ export const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>(
 			ref.current?.click();
 		};
 		return (
-			<CheckBoxWrapper {...args} onClick={() => handleCheck(!isChecked)}>
+			<CheckBoxWrapper onClick={() => handleCheck(!isChecked)}>
 				<Check checked={isChecked}>
 					<span />
 				</Check>

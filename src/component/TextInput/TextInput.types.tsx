@@ -2,12 +2,16 @@
 import {icons} from "../../theme/icon";
 export enum InputType {}
 export type TextInputProps = {
-	readonly label: string;
+	readonly label?: string;
 	readonly error?: string;
 	readonly help?: string;
 	readonly placeholder?: string;
 	readonly disabled?: boolean;
 	readonly icon?: keyof typeof icons;
+	readonly onClick?: () => void;
+	readonly autoFocus?: boolean;
+	readonly isFocus?: boolean;
+	readonly value?: any;
 	readonly type?:
 		| "date"
 		| "datetime-local"

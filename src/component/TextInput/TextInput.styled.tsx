@@ -29,7 +29,7 @@ export const InputWrapper = styled.div.attrs({className: `relative`})``;
 
 export const Input = styled.input.attrs<InputProps>(({error}) => {
 	const className = classnames({
-		"w-full text-gray-dark rounded px-3 border rounded-lg border-gray-light border-opacity-60 focus:border-primary disabled:border-gray-lightest disabled:bg-gray-lightest placeholder-gray-light":
+		"w-full text-gray-dark rounded px-3 border rounded-lg border-gray-light border-opacity-60 focus:border-primary placeholder-gray-light disabled:border-gray-lightest disabled:bg-gray-lightest":
 			true,
 		"border-red": error,
 	});

@@ -8,7 +8,7 @@ export enum Type {
 
 export type AlertProps = {
 	readonly title: string;
+	readonly type: keyof typeof Type;
 	// optional
-	readonly type?: keyof typeof Type;
 	readonly description?: string;
 };

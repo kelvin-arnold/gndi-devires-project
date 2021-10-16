@@ -1,7 +1,8 @@
 // Component generated with util/vox-create-component.js
 export type RadioButtonProps = {
-	onClick: () => void;
 	label: string;
+	value: string;
+
 	name?: string;
 	checked?: boolean;
 };

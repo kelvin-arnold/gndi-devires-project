@@ -7,9 +7,7 @@ const RADIOBUTTON_TEST_ID = "RADIOBUTTON_TEST_ID";
 
 describe("RadioButton component", () => {
 	it("should render component", async () => {
-		render(
-			<RadioButton onClick={() => {}} label="test" name="test" data-testid={RADIOBUTTON_TEST_ID} />,
-		);
+		render(<RadioButton label="test" name="test" value="test" data-testid={RADIOBUTTON_TEST_ID} />);
 		const renderComponent = await waitFor(() => screen.getByTestId(RADIOBUTTON_TEST_ID));
 		expect(renderComponent).toBeInTheDocument();
 	});

@@ -7,7 +7,7 @@ const CHECKBOX_TEST_ID = "CHECKBOX_TEST_ID";
 
 describe("CheckBox component", () => {
 	it("should render component", async () => {
-		render(<CheckBox data-testid={CHECKBOX_TEST_ID} />);
+		render(<CheckBox label="checkbox" value="test" data-testid={CHECKBOX_TEST_ID} />);
 		const renderComponent = await waitFor(() => screen.getByTestId(CHECKBOX_TEST_ID));
 		expect(renderComponent).toBeInTheDocument();
 	});

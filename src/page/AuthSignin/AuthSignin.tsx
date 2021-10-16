@@ -2,80 +2,52 @@
 import React from "react";
 import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
-import {CPNTextInput} from "./../../component";
-import {UIButton, UIBadge, UIICon, UIText} from "./../../ui";
+import {CPNSelectInput, CPNTextInput} from "./../../component";
+import {UIButton} from "./../../ui";
 import {AuthContext} from "./../../context/AuthContext";
+import {useForm} from "react-hook-form";
+import {string, SchemaOf, object} from "yup";
+import {yupResolver} from "@hookform/resolvers/yup";
+
+type AuthFormData = {
+	input1: string;
+	input2: string;
+};
 
 export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 	// Context Here
 	const {setSession} = React.useContext(AuthContext);
+	// Validations
+	const AuthFormValidation: SchemaOf<AuthFormData> = object().shape({
+		input1: string().required("1"),
+		input2: string().required("2"),
+	});
+	// Form
+	const {
+		register,
+		handleSubmit,
+		formState: {errors},
+	} = useForm<AuthFormData>({
+		// resolver: yupResolver(AuthFormValidation),
+		mode: "onSubmit",
+	});
 	// States Here
 	// Effects Here
 	// Handlers Here
+	const submit = handleSubmit((data) => console.log("data: ", data));
 	const login = () =>
 		setSession({userName: "devires@user"}, "deviresTokenAccess", "deviresRefreshToken");
+	// Component
 	return (
 		<AuthSigninWrapper {...args}>
-			<div className="mb-4">
-				<div className="mb-1">
-					<UIBadge color="GRAY" size="SMALL">
-						1
-					</UIBadge>
-					<UIText preset="BODY_02">Tipografia body 02</UIText>
-					<UIButton label="click" onClick={() => alert("click!")} />
-					<UIButton disabled label="click" onClick={() => alert("click!")} />
-					<UIButton icon="addCircle" label="click" onClick={() => alert("click!")} />
-					<UIButton disabled icon="addCircle" label="click" onClick={() => alert("click!")} />
-					<UIButton
-						icon="addCircle"
-						preset="SECONDARY"
-						label="click"
-						onClick={() => alert("click!")}
-					/>
-					<UIButton
-						disabled
-						icon="addCircle"
-						preset="SECONDARY"
-						label="click"
-						onClick={() => alert("click!")}
-					/>
-					<UIButton preset="LINK" label="click" onClick={() => alert("click!")} />
-					<UIButton disabled preset="LINK" label="click" onClick={() => alert("click!")} />
-					<UIButton icon="addCircle" preset="LINK" label="click" onClick={() => alert("click!")} />
-					<UIButton
-						disabled
-						icon="addCircle"
-						preset="LINK"
-						label="click"
-						onClick={() => alert("click!")}
-					/>
-					<UIButton label="click" preset="DANGER" onClick={() => alert("click!")} />
-					<UIButton label="click" preset="DARK" onClick={() => alert("click!")} />
-				</div>
-				<div className="mb-1">
-					<UIBadge color="DANGER" size="NORMAL">
-						10
-					</UIBadge>
-				</div>
-				<div className="flex flex-row gap-6 w-full ">
-					<div className="flex-1 w-full">
-						<CPNTextInput label="Text input" placeholder="Some placeholder" disabled />
-					</div>
-					<div className="flex-1 w-full">
-						<CPNTextInput label="Text input" placeholder="Some placeholder" disabled />
-					</div>
-				</div>
-				<div className="flex flex-row gap-6 w-full ">
-					<div className="flex-1 w-full">
-						<CPNTextInput label="Text input" />
-					</div>
-					<div className="flex-1 w-full">
-						<CPNTextInput label="Text input" />
-					</div>
-				</div>
+			<div className="mt-4 w-full">
+				<CPNTextInput label="Select" placeholder="Selecione" {...register("input1")} />
 			</div>
-			<div className="mt-6">
-				<UIButton label="Sign in" onClick={login} />
+			<div className="mt-4 w-full">
+				<CPNSelectInput label="Select" placeholder="Selecione" {...register("input2")} />
+			</div>
+			<div className="mt-6  w-full">
+				<UIButton label="Sign in" onClick={submit} />
 			</div>
 		</AuthSigninWrapper>
 	);

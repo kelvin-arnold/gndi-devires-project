@@ -31,7 +31,7 @@ export const Alert: React.VFC<AlertProps> = ({
 	// Handlers Here
 	return (
 		<AlertWrapper type={type} {...args}>
-			<UIICon name={ICONS[type] as keyof typeof icons} size="md" color={COLORS[type]} />
+			{/* <UIICon name={ICONS[type] as keyof typeof icons} size="md" color={COLORS[type]} /> */}
 			<div className="ml-3 flex flex-col">
 				<UIText preset="SUBTITLE">{title}</UIText>
 				{description && (

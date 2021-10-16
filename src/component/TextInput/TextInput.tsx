@@ -5,13 +5,16 @@ import {TextInputProps} from "./TextInput.types";
 import {UIText, UIICon} from "./../../ui";
 
 export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
-	({label, disabled, error, help, placeholder, type = "text", icon, ...args}, ref) => {
+	(
+		{label, disabled, error, help, placeholder, type = "text", icon, onClick = () => {}, ...args},
+		ref,
+	) => {
 		// Context Here
 		// States Here
 		// Effects Here
 		// Handlers Here
 		return (
-			<TextInputWrapper>
+			<TextInputWrapper data-name="text-input">
 				{label && (
 					<div className="mb-0.5">
 						<UIText preset="BODY_02" color="GREY">
@@ -19,11 +22,16 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 						</UIText>
 					</div>
 				)}
-				<InputWrapper>
-					<Input {...{placeholder, type, disabled, error}} {...args} ref={ref} />
+				<InputWrapper onClick={onClick}>
+					<Input
+						{...{placeholder, type, disabled, error}}
+						// onChange={(e) => (onChange ? onChange(e.currentTarget.value) : {})}
+						ref={ref}
+						{...args}
+					/>
 					{icon && (
 						<Icon>
-							<UIICon name="chevronDown" />
+							<UIICon name={icon} />
 						</Icon>
 					)}
 				</InputWrapper>

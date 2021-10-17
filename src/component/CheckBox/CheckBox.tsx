@@ -5,7 +5,7 @@ import {CheckBoxProps} from "./CheckBox.types";
 import {UIText} from "./../../ui";
 
 export const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>(
-	({label, value, checked = false, ...args}, inRef) => {
+	({label, value, checked = false, onChangeCapture, ...args}, inRef) => {
 		// States
 		const [isChecked, setChecked] = React.useState<boolean>(checked);
 		// Refs
@@ -31,6 +31,7 @@ export const CheckBox = React.forwardRef<HTMLInputElement, CheckBoxProps>(
 					ref={ref}
 					{...args}
 					className="hidden"
+					onChangeCapture={(a) => (onChangeCapture ? onChangeCapture(a.currentTarget.value) : {})}
 				/>
 			</CheckBoxWrapper>
 		);

@@ -24,23 +24,17 @@ export const BadgeWrapper = styled.div.attrs<BadgeProps>(({size, color}) => {
 		min-width: 20px;
 		height: 20px;
 		border-radius: 10px;
-		/* padding-left: 4px;
-		padding-right: 4px; */
 	}
 	&.normal {
 		width: fit-content;
 		min-width: 24px;
 		height: 24px;
 		border-radius: 12px;
-		/* padding-left: 2px;
-		padding-right: 2px; */
 	}
 	&.medium {
 		width: fit-content;
 		min-width: 32px;
 		height: 32px;
 		border-radius: 16px;
-		/* padding-left: 2px;
-		padding-right: 2px; */
 	}
 `;

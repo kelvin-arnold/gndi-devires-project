@@ -8,6 +8,7 @@ export type TextInputProps = {
 	readonly placeholder?: string;
 	readonly disabled?: boolean;
 	readonly icon?: keyof typeof icons;
+	readonly badge?: number;
 	readonly onClick?: () => void;
 	readonly autoFocus?: boolean;
 	readonly isFocus?: boolean;

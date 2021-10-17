@@ -30,4 +30,6 @@ export const TextWrapper = styled.span.attrs<TextProps>(({preset, color}) => {
 	return {
 		className,
 	};
-})<TextProps>``;
+})<TextProps>`
+	cursor: inherit;
+`;

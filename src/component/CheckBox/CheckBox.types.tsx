@@ -3,4 +3,5 @@ export type CheckBoxProps = {
 	label: string;
 	value: any;
 	checked?: boolean;
+	onChangeCapture?: (val: any) => void;
 };

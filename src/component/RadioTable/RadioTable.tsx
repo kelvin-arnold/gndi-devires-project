@@ -41,7 +41,7 @@ const OPTIONS: Option[] = [
 ];
 
 export const RadioTable = React.forwardRef<HTMLInputElement, RadioTableProps>(
-	({title, name, ...args}, ref) => {
+	({title, name, options = OPTIONS, ...args}, ref) => {
 		// Context Here
 		// States Here
 		// Effects Here
@@ -51,7 +51,7 @@ export const RadioTable = React.forwardRef<HTMLInputElement, RadioTableProps>(
 				<UIText preset="BODY_02" color="GREY">
 					{title}
 				</UIText>
-				{OPTIONS.map((option, index) => (
+				{options.map((option, index) => (
 					<RadioTableWrapper even={index % 2 === 0} key={option.id}>
 						<RadioButton {...{...option, name}} ref={ref} />
 					</RadioTableWrapper>

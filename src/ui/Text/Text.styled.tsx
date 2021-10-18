@@ -6,7 +6,7 @@ import {TextProps} from "./Text.types";
 /**
  * Components
  */
-export const TextWrapper = styled.span.attrs<TextProps>(({preset, color}) => {
+export const TextWrapper = styled.span.attrs<TextProps>(({preset, color, onClick}) => {
 	const className = classnames({
 		prose: preset === "BODY", // 16px
 		"prose prose-sm": preset === "BODY_02", // 14px
@@ -26,6 +26,7 @@ export const TextWrapper = styled.span.attrs<TextProps>(({preset, color}) => {
 		"text-red": color === "DANGER",
 		"text-gray": color === "GREY",
 		"text-gray-dark": color === "DARK",
+		"underline cursor-pointer": onClick,
 	});
 	return {
 		className,

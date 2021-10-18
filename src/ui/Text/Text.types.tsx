@@ -27,4 +27,5 @@ export enum Color {
 export type TextProps = {
 	readonly preset?: keyof typeof Preset;
 	readonly color?: keyof typeof Color;
+	readonly onClick?: (props: any) => void;
 };

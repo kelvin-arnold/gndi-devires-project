@@ -5,3 +5,4 @@ export {default as CPNRadioButton} from "./RadioButton/RadioButton";
 export {default as CPNCheckBox} from "./CheckBox/CheckBox";
 export {default as CPNTextarea} from "./Textarea/Textarea";
 export {default as CPNRadioTable} from "./RadioTable/RadioTable";
+export {default as CPNCard} from "./Card/Card";

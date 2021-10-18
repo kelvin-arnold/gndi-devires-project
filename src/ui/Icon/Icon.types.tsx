@@ -17,7 +17,8 @@ export enum Color {
 export type Size = "sm" | "md";
 
 export type IconProps = IconStyleProps & {
-	name: keyof typeof icons;
+	readonly name: keyof typeof icons;
+	readonly onClick?: (props?: any) => void;
 };
 
 export type IconStyleProps = {

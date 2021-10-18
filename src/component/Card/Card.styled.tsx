@@ -1,4 +1,5 @@
 // Component generated with util/create-component.js
+import classNames from "classnames";
 import classnames from "classnames";
 import styled from "styled-components";
 import {CardProps} from "./Card.types";
@@ -14,19 +15,12 @@ export const CardWrapper = styled.div.attrs<CardProps & {open?: boolean}>(({type
 		"py-5 w-full cursor-pointer text-black": type === "ACCORDION",
 		"border border-gray-light border-opacity-60 ": type === "ACCORDION" && !open,
 		"border border-primary border-opacity-100": type === "ACCORDION" && open,
+		"py-3": type === "LIST",
 	});
 	return {
 		className,
 	};
 })<CardProps & {open?: boolean}>``;
-
-export const ActionsWrapper = styled.div.attrs({
-	className: `flex flex-row items-center `,
-})``;
-
-export const ContentWrapper = styled.div.attrs({
-	className: `flex flex-col`,
-})``;
 
 export const IconWrapper = styled.div.attrs<CardProps>(({type}) => {
 	const className = classnames({

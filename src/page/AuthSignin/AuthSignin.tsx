@@ -2,9 +2,9 @@
 import React from "react";
 import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
-import {CPNSelectInput, CPNTextInput, CPNCheckBox} from "./../../component";
-import {Option} from "./../../component/SelectInput/SelectInput.types";
-import {UIButton, UIBadge} from "./../../ui";
+import {CPNStepper} from "./../../component";
+import {Step} from "./../../component/Stepper/Stepper.types";
+import {UIButton} from "./../../ui";
 import {AuthContext} from "./../../context/AuthContext";
 import {useForm} from "react-hook-form";
 import {string, SchemaOf, object} from "yup";
@@ -17,61 +17,27 @@ type AuthFormData = {
 	input3: string;
 };
 
-const OPTIONS: Option[] = [
+const STEPS: Step[] = [
 	{
 		id: uniqid(),
-		label: "option 1",
-		value: 1,
+		label: "1",
+		done: true,
 	},
 	{
 		id: uniqid(),
-		label: "option 2",
-		value: 2,
+		label: "2",
 	},
 	{
 		id: uniqid(),
-		label: "option 3",
-		value: 3,
+		label: "3",
 	},
 	{
 		id: uniqid(),
-		label: "option 4",
-		value: 4,
+		label: "4",
 	},
 	{
 		id: uniqid(),
-		label: "option 5",
-		value: 5,
-	},
-	{
-		id: uniqid(),
-		label: "option 6",
-		value: 6,
-	},
-	{
-		id: uniqid(),
-		label: "option 7",
-		value: 7,
-	},
-	{
-		id: uniqid(),
-		label: "option 8",
-		value: 8,
-	},
-	{
-		id: uniqid(),
-		label: "option 9",
-		value: 9,
-	},
-	{
-		id: uniqid(),
-		label: "option 10",
-		value: 10,
-	},
-	{
-		id: uniqid(),
-		label: "option 11",
-		value: 11,
+		label: "5",
 	},
 ];
 
@@ -103,27 +69,10 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 	return (
 		<AuthSigninWrapper {...args}>
 			<div className="mt-4 w-full">
-				<CPNTextInput label="Select" placeholder="Selecione" {...register("input1")} />
-			</div>
-			<div className="mt-4 w-full">
-				<CPNSelectInput
-					label="Select"
-					placeholder="Selecione"
-					options={OPTIONS}
-					{...register("input2")}
+				<CPNStepper
+					steppes={STEPS}
+					allStepsDone={(steps) => console.log("allStepsDone: ", steps)}
 				/>
-			</div>
-			<div className="mt-4 w-full">
-				<CPNSelectInput
-					label="Multi check"
-					placeholder="Multi check placeholder"
-					options={OPTIONS}
-					type="MULTICHECK"
-					{...register("input3")}
-				/>
-			</div>
-			<div className="mt-6  w-full">
-				<UIButton label="Sign in" onClick={submit} />
 			</div>
 		</AuthSigninWrapper>
 	);

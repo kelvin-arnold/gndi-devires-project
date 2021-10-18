@@ -15,7 +15,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
 		// Effects Here
 		// Handlers Here
 		return (
-			<TextareaWrapper {...args}>
+			<TextareaWrapper>
 				{label && (
 					<UIText preset="BODY_02" color="GREY">
 						{label}

@@ -44,23 +44,32 @@ export const Stepper: React.VFC<StepperProps> = ({steppes = [], allStepsDone, ..
 	};
 	return (
 		<StepperWrapper {...args}>
-			{allSteppes.map((step, i) => (
-				<div className="step" key={step.id}>
-					<StepItem
-						onClick={() => onSelectStep(step, i)}
-						done={step.done}
-						current={step.id === currentStep.id}>
-						{step.done ? (
-							<UIICon name="check" color="WHITE" size="md" />
-						) : (
-							<UIText preset="HEADLINE" color="INHERIT">
-								{step.label}
-							</UIText>
+			{allSteppes.map((step, i) => {
+				const isCurrent = step.id === currentStep.id;
+				return (
+					<div className="step" key={step.id}>
+						<StepItem onClick={() => onSelectStep(step, i)} done={step.done} current={isCurrent}>
+							{step.done ? (
+								<UIICon name="check" color="WHITE" size="md" />
+							) : (
+								<UIText preset="HEADLINE" color="INHERIT">
+									{step.label}
+								</UIText>
+							)}
+							<div className="label">
+								<UIText preset="BODY_02" color="INHERIT">
+									Passo {i + 1}
+								</UIText>
+							</div>
+						</StepItem>
+						{i + 1 < steppes.length && (
+							<div
+								className={`bar ${i <= lastDone ? "bg-primary" : "bg-gray-light bg-opacity-60"}`}
+							/>
 						)}
-					</StepItem>
-					{i + 1 < steppes.length && <div className="bar" />}
-				</div>
-			))}
+					</div>
+				);
+			})}
 		</StepperWrapper>
 	);
 };

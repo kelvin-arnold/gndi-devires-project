@@ -16,14 +16,14 @@ export const StepperWrapper = styled.div.attrs({
 	& .step {
 		${tw`flex flex-row gap-4 items-center`}
 		& .bar {
-			${tw`h-0.5 w-8 bg-gray-light bg-opacity-60 rounded-full`}
+			${tw`h-0.5 w-8 rounded-full`}
 		}
 	}
 `;
 
 export const StepItem = styled.div.attrs<StepProp>(({current, done}) => {
 	const className = classnames({
-		"flex h-8 w-8 items-center justify-center rounded-full cursor-pointer": true,
+		"flex h-8 w-8 items-center justify-center rounded-full cursor-pointer relative": true,
 		"border border-gray-disabled": !current && !done,
 		"border border-primary": current || done,
 		"bg-primary": done,
@@ -32,7 +32,13 @@ export const StepItem = styled.div.attrs<StepProp>(({current, done}) => {
 		className,
 	};
 })<StepProp>`
-	& span {
+	& > span,
+	:not(.label) {
 		${({current}) => (current ? tw`` : tw`text-gray text-opacity-40`)}
+	}
+	& .label {
+		${({done, current}) => (done || current ? tw`text-gray font-bold` : tw`text-gray-light`)}
+		${tw`absolute w-8.5 text-center text-opacity-100`}
+		bottom: -2rem;
 	}
 `;

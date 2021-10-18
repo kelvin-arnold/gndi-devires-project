@@ -28,7 +28,7 @@ export const Card: React.VFC<CardProps> = ({
 		<CardWrapper
 			open={openAccordion}
 			onClick={type === "LINK" ? () => onClickCard : () => toggleAccordion()}
-			{...{type, args}}>
+			{...{type, ...args}}>
 			<div className="flex flex-row items-center justify-between">
 				{leftIcon && (
 					<IconWrapper type={type}>

@@ -12,7 +12,7 @@ export enum preset {
 export type ButtonProps = {
 	// Required
 	readonly label: string;
-	readonly onClick: () => void;
+	readonly onClick: (props?: any) => void;
 	// Optional
 	readonly preset?: keyof typeof preset;
 	readonly disabled?: boolean;

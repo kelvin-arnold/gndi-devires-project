@@ -8,3 +8,4 @@ export {default as CPNRadioTable} from "./RadioTable/RadioTable";
 export {default as CPNTooltip} from "./Tooltip/Tooltip";
 export {default as CPNCard} from "./Card/Card";
 export {default as CPNStepper} from "./Stepper/Stepper";
+export {default as CPNBreadCrumb} from "./BreadCrumb/BreadCrumb";

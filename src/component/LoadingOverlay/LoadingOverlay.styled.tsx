@@ -6,7 +6,7 @@ import tw from "twin.macro";
  * Components
  */
 export const LoadingOverlayWrapper = styled.div.attrs({
-	className: `flex flex-col items-center justify-center bg-gray bg-opacity-70 fixed`,
+	className: `flex flex-col items-center justify-center bg-gray bg-opacity-70 fixed z-50`,
 })`
 	top: 0;
 	right: 0;

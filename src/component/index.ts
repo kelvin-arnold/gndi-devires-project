@@ -11,3 +11,4 @@ export {default as CPNStepper} from "./Stepper/Stepper";
 export {default as CPNLoadingOverlay} from "./LoadingOverlay/LoadingOverlay";
 export {default as CPNBreadCrumb} from "./BreadCrumb/BreadCrumb";
 export {default as CPNStrongPassword} from "./StrongPassword/StrongPassword";
+export {default as CPNSlider} from "./Slider/Slider";

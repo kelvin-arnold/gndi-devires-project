@@ -9,7 +9,7 @@ export const SliderWrapper = styled.div.attrs({className: "flex flex-row"})``;
 
 export const SliderItem = styled.div.attrs<{focused: boolean}>(({focused}) => {
 	const className = classNames({
-		"h-1.5 rounded-full mr-3": true,
+		"h-1.5 rounded-full mr-3 transition-all": true,
 		"bg-gray-light bg-opacity-50 w-1.5": !focused,
 		"bg-primary w-5": focused,
 	});

@@ -2,7 +2,7 @@
 import React from "react";
 import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
-import {CPNStepper} from "./../../component";
+import {CPNBreadCrumb} from "./../../component";
 import {Step} from "./../../component/Stepper/Stepper.types";
 import {UIButton} from "./../../ui";
 import {AuthContext} from "./../../context/AuthContext";
@@ -17,46 +17,22 @@ type AuthFormData = {
 	input3: string;
 };
 
-const STEPS: Step[] = [
-	{
-		id: uniqid(),
-		label: "1",
-		done: true,
-	},
-	{
-		id: uniqid(),
-		label: "2",
-	},
-	{
-		id: uniqid(),
-		label: "3",
-	},
-	{
-		id: uniqid(),
-		label: "4",
-	},
-	{
-		id: uniqid(),
-		label: "5",
-	},
-];
-
 export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 	// Context Here
 	const {setSession} = React.useContext(AuthContext);
 	// Validations
-	// const AuthFormValidation: SchemaOf<AuthFormData> = object().shape({
-	// 	input1: string().required("1"),
-	// 	input2: string().required("2"),
-	// 	input3: string().required("3"),
-	// });
+	const AuthFormValidation: SchemaOf<AuthFormData> = object().shape({
+		input1: string().required("1"),
+		input2: string().required("2"),
+		input3: string().required("3"),
+	});
 	// Form
 	const {
 		register,
 		handleSubmit,
 		formState: {errors},
 	} = useForm<AuthFormData>({
-		// resolver: yupResolver(AuthFormValidation),
+		resolver: yupResolver(AuthFormValidation),
 		mode: "onSubmit",
 	});
 	// States Here
@@ -69,9 +45,17 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 	return (
 		<AuthSigninWrapper {...args}>
 			<div className="mt-4 w-full">
-				<CPNStepper
-					steppes={STEPS}
-					allStepsDone={(steps) => console.log("allStepsDone: ", steps)}
+				<CPNBreadCrumb
+					crumbs={[
+						{
+							label: "Home",
+							route: "/Home",
+						},
+						{
+							label: "Movimentação cadastral",
+							route: "/Register",
+						},
+					]}
 				/>
 			</div>
 		</AuthSigninWrapper>

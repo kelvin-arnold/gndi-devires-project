@@ -2,7 +2,7 @@
 import React from "react";
 import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
-import {CPNBreadCrumb} from "./../../component";
+import {CPNLoadingOverlay, CPNBreadCrumb} from "./../../component";
 import {Step} from "./../../component/Stepper/Stepper.types";
 import {UIButton} from "./../../ui";
 import {AuthContext} from "./../../context/AuthContext";
@@ -45,6 +45,8 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 	return (
 		<AuthSigninWrapper {...args}>
 			<div className="mt-4 w-full">
+				{/* <CPNLoadingOverlay /> */}
+				<UIButton onClick={() => console.log("button press")} loading label="Demo" />
 				<CPNBreadCrumb
 					crumbs={[
 						{

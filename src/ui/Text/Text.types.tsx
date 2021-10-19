@@ -22,6 +22,7 @@ export enum Color {
 	WHITE,
 	DARK,
 	INHERIT,
+	GREEN,
 }
 
 export type TextProps = {

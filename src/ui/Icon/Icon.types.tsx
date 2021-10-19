@@ -12,9 +12,10 @@ export enum Color {
 	INHERIT,
 	BLUE,
 	GREEN,
+	LIGHTGREY,
 }
 
-export type Size = "sm" | "md";
+export type Size = "xs" | "sm" | "md";
 
 export type IconProps = IconStyleProps & {
 	readonly name: keyof typeof icons;

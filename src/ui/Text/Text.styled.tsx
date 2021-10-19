@@ -26,6 +26,7 @@ export const TextWrapper = styled.span.attrs<TextProps>(({preset, color, onClick
 		"text-red": color === "DANGER",
 		"text-gray": color === "GREY",
 		"text-gray-dark": color === "DARK",
+		"text-green": color === "GREEN",
 		"underline cursor-pointer": onClick,
 	});
 	return {

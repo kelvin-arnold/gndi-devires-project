@@ -17,4 +17,5 @@ export type ButtonProps = {
 	readonly preset?: keyof typeof preset;
 	readonly disabled?: boolean;
 	readonly icon?: keyof typeof icons;
+	readonly loading?: boolean;
 };

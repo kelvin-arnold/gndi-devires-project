@@ -55,6 +55,7 @@ import {ReactComponent as Work} from "../assets/icons/work.svg";
 import {ReactComponent as DocumentFilled} from "../assets/icons/document_filled.svg";
 import {ReactComponent as CheckFilled} from "../assets/icons/check_filled.svg";
 import {ReactComponent as ErrorFilled} from "../assets/icons/error_filled.svg";
+import {ReactComponent as Loading} from "../assets/icons/loading.svg";
 
 export const icons = {
 	addCircle: AddCircle,
@@ -114,4 +115,5 @@ export const icons = {
 	documentFilled: DocumentFilled,
 	errorFilled: ErrorFilled,
 	checkFilled: CheckFilled,
+	loading: Loading,
 };

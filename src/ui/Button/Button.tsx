@@ -9,6 +9,7 @@ export const Button: React.VFC<ButtonProps> = ({
 	onClick,
 	preset = "DEFAULT",
 	icon,
+	loading,
 	...args
 }) => {
 	return (
@@ -18,9 +19,15 @@ export const Button: React.VFC<ButtonProps> = ({
 					<UIICon name={icon} />
 				</div>
 			)}
-			<UIText preset="BUTTON" color="INHERIT">
-				{label || "Button"}
-			</UIText>
+			{loading ? (
+				<div className="animate-spin">
+					<UIICon name="loading" color="WHITE" />
+				</div>
+			) : (
+				<UIText preset="BUTTON" color="INHERIT">
+					{label || "Button"}
+				</UIText>
+			)}
 		</ButtonWrapper>
 	);
 };

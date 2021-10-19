@@ -45,8 +45,8 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 	return (
 		<AuthSigninWrapper {...args}>
 			<div className="mt-4 w-full">
-				<CPNLoadingOverlay />
-				<UIButton onClick={() => {}} loading label="Demo" />
+				{/* <CPNLoadingOverlay /> */}
+				<UIButton onClick={() => console.log("button press")} loading label="Demo" />
 			</div>
 		</AuthSigninWrapper>
 	);

@@ -13,7 +13,7 @@ export const Button: React.VFC<ButtonProps> = ({
 	...args
 }) => {
 	return (
-		<ButtonWrapper {...{onClick, bp: preset}} {...args}>
+		<ButtonWrapper {...{onClick: !loading ? onClick : () => {}, bp: preset}} {...args}>
 			{icon && (
 				<div className="mr-0.5">
 					<UIICon name={icon} />

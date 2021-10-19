@@ -28,6 +28,7 @@ export const ButtonWrapper = styled.button.attrs<ButtonProps>(({bp, disabled}) =
 		className,
 	};
 })<ButtonProps>`
+	height: 44px;
 	& svg * {
 		fill: currentColor;
 	}

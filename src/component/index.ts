@@ -9,3 +9,4 @@ export {default as CPNTooltip} from "./Tooltip/Tooltip";
 export {default as CPNCard} from "./Card/Card";
 export {default as CPNStepper} from "./Stepper/Stepper";
 export {default as CPNLoadingOverlay} from "./LoadingOverlay/LoadingOverlay";
+export {default as CPNBreadCrumb} from "./BreadCrumb/BreadCrumb";

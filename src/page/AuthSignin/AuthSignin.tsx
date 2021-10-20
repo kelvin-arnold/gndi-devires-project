@@ -2,7 +2,7 @@
 import React from "react";
 import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
-import {CPNLoadingOverlay} from "./../../component";
+import {CPNLoadingOverlay, CPNModal} from "./../../component";
 import {Step} from "./../../component/Stepper/Stepper.types";
 import {UIButton} from "./../../ui";
 import {AuthContext} from "./../../context/AuthContext";
@@ -36,6 +36,7 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 		mode: "onSubmit",
 	});
 	// States Here
+	const [modal, setModal] = React.useState(false);
 	// Effects Here
 	// Handlers Here
 	const submit = handleSubmit((data) => console.log("data: ", data));
@@ -44,9 +45,22 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 	// Component
 	return (
 		<AuthSigninWrapper {...args}>
+			<CPNModal
+				title="Modal title"
+				description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected."
+				primaryAction={{
+					label: "Primary action",
+					onClick: () => {},
+				}}
+				secondaryAction={{
+					label: "Secondary action",
+					onClick: () => {},
+				}}
+				showModal={modal}
+				onModalClose={() => setModal(false)}
+			/>
 			<div className="mt-4 w-full">
-				{/* <CPNLoadingOverlay /> */}
-				<UIButton onClick={() => console.log("button press")} loading label="Demo" />
+				<UIButton onClick={() => setModal(true)} label="Demo" />
 			</div>
 		</AuthSigninWrapper>
 	);

@@ -18,4 +18,5 @@ export type ButtonProps = {
 	readonly disabled?: boolean;
 	readonly icon?: keyof typeof icons;
 	readonly loading?: boolean;
+	readonly outline?: boolean;
 };

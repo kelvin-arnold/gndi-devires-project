@@ -15,6 +15,7 @@ describe("Modal component", () => {
 					onClick: () => {},
 				}}
 				data-testid={MODAL_TEST_ID}
+				showModal
 			/>,
 		);
 		const renderComponent = await waitFor(() => screen.getByTestId(MODAL_TEST_ID));

@@ -27,9 +27,9 @@ export const Modal: React.VFC<ModalProps> = ({
 	};
 	if (!visible) return null;
 	return (
-		<ModalContainer>
+		<ModalContainer {...args}>
 			<Overlay onClick={hideModal} />
-			<ModalWrapper {...args}>
+			<ModalWrapper>
 				<div className="header">
 					{title && <UIText preset="HEADLINE">{title}</UIText>}{" "}
 					<UIICon name="times" color="DARK" onClick={hideModal} />

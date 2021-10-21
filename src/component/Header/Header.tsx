@@ -1,7 +1,7 @@
 // Component generated with util/vox-create-component.js
 import React from "react";
 import {CPNTextInput} from "..";
-import {UIBadge, UIICon, UIText} from "../../ui";
+import {UIICon, UIText} from "../../ui";
 import {
 	HeaderTopIconWrapper,
 	HeaderTopWrapper,
@@ -9,6 +9,8 @@ import {
 	HeaderBodyWrapper,
 } from "./Header.styled";
 import {HeaderProps} from "./Header.types";
+import NotificationNav from "./NotificationNav";
+import UserNav from "./UserNav";
 
 export const Header: React.VFC<HeaderProps> = ({...args}) => {
 	// Context Here
@@ -39,21 +41,8 @@ export const Header: React.VFC<HeaderProps> = ({...args}) => {
 					<CPNTextInput placeholder="O que você está procurando?" icon="search" />
 				</div>
 				<div className="flex flex-row items-center">
-					<div className="relative mr-8.5">
-						<div className="absolute -top-2 -right-2">
-							<UIBadge size="SMALL" color="PRIMARY">
-								3
-							</UIBadge>
-						</div>
-						<UIICon name="notification" size="xs" color="LIGHTGREY" />
-					</div>
-					<div className="flex flex-row items-center">
-						<UIICon name="user" size="xs" color="LIGHTGREY" />
-						<div className="ml-2 mr-1">
-							<UIText color="LIGHTGREY">Olá, Camila</UIText>
-						</div>
-						<UIICon name="chevronDown" size="xs" />
-					</div>
+					<NotificationNav />
+					<UserNav />
 				</div>
 			</HeaderBodyWrapper>
 		</HeaderWrapper>

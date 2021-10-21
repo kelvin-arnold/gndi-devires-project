@@ -56,7 +56,7 @@ import {ReactComponent as DocumentFilled} from "../assets/icons/document_filled.
 import {ReactComponent as CheckFilled} from "../assets/icons/check_filled.svg";
 import {ReactComponent as ErrorFilled} from "../assets/icons/error_filled.svg";
 import {ReactComponent as Loading} from "../assets/icons/loading.svg";
-
+import {ReactComponent as Settings} from "../assets/icons/settings.svg";
 export const icons = {
 	addCircle: AddCircle,
 	arrowBack: ArrowBack,
@@ -116,4 +116,5 @@ export const icons = {
 	errorFilled: ErrorFilled,
 	checkFilled: CheckFilled,
 	loading: Loading,
+	settings: Settings,
 };

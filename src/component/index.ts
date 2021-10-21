@@ -13,4 +13,5 @@ export {default as CPNModal} from "./Modal/Modal";
 export {default as CPNBreadCrumb} from "./BreadCrumb/BreadCrumb";
 export {default as CPNStrongPassword} from "./StrongPassword/StrongPassword";
 export {default as CPNSlider} from "./Slider/Slider";
+export {default as CPNHeader} from "./Header/Header";
 export {default as CPNMenu} from "./Menu/Menu";

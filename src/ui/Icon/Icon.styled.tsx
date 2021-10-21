@@ -6,7 +6,7 @@ import {IconStyleProps} from "./Icon.types";
 /**
  * Components
  */
-export const IconWrapper = styled.div.attrs<IconStyleProps>(({size, color}) => {
+export const IconWrapper = styled.div.attrs<IconStyleProps>(({size, color, onClick}) => {
 	const className = classnames({
 		"w-3 h-3 xs": size === "xs",
 		"icon w-4 h-4 sm": size === "sm",
@@ -20,6 +20,7 @@ export const IconWrapper = styled.div.attrs<IconStyleProps>(({size, color}) => {
 		"fill-current text-gray-dark": color === "DARK",
 		"fill-current text-blue": color === "BLUE",
 		"fill-current text-green": color === "GREEN",
+		"cursor-pointer": onClick,
 	});
 	return {
 		className,

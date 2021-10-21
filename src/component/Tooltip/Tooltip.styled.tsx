@@ -16,7 +16,7 @@ export const TooltipWrapper = styled.div.attrs({className: "relative w-4 cursor-
 
 export const Content = styled.div.attrs<TooltipStyleProps>({
 	className:
-		"bg-white absolute rounded-lg border border-gray-light border-opacity-60 p-3 shadow-lg z-50 opacity-0 cursor-default",
+		"bg-white absolute rounded-lg border border-gray-light border-opacity-60 p-3 shadow-lg z-50 opacity-0 cursor-default text-gray-light",
 })<TooltipStyleProps>`
 	& {
 		width: 284px;

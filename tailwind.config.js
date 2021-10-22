@@ -58,6 +58,7 @@ module.exports = {
 			sans: ["Oxygen", "sans-serif"],
 		},
 		spacing: {
+			0: "0px",
 			0.5: "4px",
 			0.75: "6px",
 			1: "8px",
@@ -67,7 +68,9 @@ module.exports = {
 			3: "16px",
 			3.5: "18px",
 			4: "20px",
+			4.5: "22px",
 			5: "24px",
+			5.5: "26px",
 			6: "28px",
 			6.5: "30px",
 			7: "32px",
@@ -83,6 +86,7 @@ module.exports = {
 		},
 		borderRadius: {
 			none: "0",
+			xs: "2px",
 			sm: "2px",
 			DEFAULT: "4px",
 			lg: "8px",

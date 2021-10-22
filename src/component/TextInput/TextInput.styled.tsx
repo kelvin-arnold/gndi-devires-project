@@ -15,18 +15,13 @@ export const TextInputWrapper = styled.div.attrs({
 })``;
 
 export const Icon = styled.div.attrs({
-	className: `absolute transform -translate-y-1 -translate-x-2`,
+	className: `absolute right-2 bottom-2 bg-white rounded`,
 })`
-	right: 0;
-	top: 50%;
+	/* right: 0;
+	top: 50%; */
 `;
 
-export const Badge = styled.div.attrs({
-	className: `absolute transform -translate-y-2 -translate-x-7.5`,
-})`
-	right: 0;
-	top: 50%;
-`;
+export const Badge = styled(Icon)``;
 
 export const InputWrapper = styled.div.attrs({className: `relative`})``;
 

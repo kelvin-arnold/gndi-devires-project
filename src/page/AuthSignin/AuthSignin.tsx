@@ -2,7 +2,7 @@
 import React from "react";
 import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
-import {CPNMenu} from "./../../component";
+import {CPNDatePicker, CPNTextInput} from "./../../component";
 import {AuthContext} from "./../../context/AuthContext";
 import {useForm} from "react-hook-form";
 
@@ -34,7 +34,16 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 	// Component
 	return (
 		<AuthSigninWrapper {...args}>
-			<CPNMenu />
+			<div className="mb-4">
+				<CPNDatePicker label="Date picker default" {...register("input1")} />
+			</div>
+			<div className="mb-4">
+				<CPNDatePicker label="Date picker range" range {...register("input2")} />
+			</div>
+			<div className="mb-4">
+				<CPNTextInput label="Demo" icon="help" />
+			</div>
+			<button onClick={submit}>aaa</button>
 		</AuthSigninWrapper>
 	);
 };

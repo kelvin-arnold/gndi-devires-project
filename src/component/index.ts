@@ -15,3 +15,4 @@ export {default as CPNStrongPassword} from "./StrongPassword/StrongPassword";
 export {default as CPNSlider} from "./Slider/Slider";
 export {default as CPNHeader} from "./Header/Header";
 export {default as CPNMenu} from "./Menu/Menu";
+export {default as CPNDatePicker} from "./DatePicker/DatePicker";

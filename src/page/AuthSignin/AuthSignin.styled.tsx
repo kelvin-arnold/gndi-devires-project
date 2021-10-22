@@ -5,5 +5,5 @@ import styled from "styled-components";
  * Components
  */
 export const AuthSigninWrapper = styled.div.attrs({
-	className: "flex flex-col flex-1 items-start bg-white h-full",
+	className: "flex flex-col flex-1 items-center justify-center bg-white h-full",
 })``;

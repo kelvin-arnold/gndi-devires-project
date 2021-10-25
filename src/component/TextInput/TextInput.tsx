@@ -37,7 +37,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 					<Input {...{placeholder, type, disabled, error}} ref={ref} {...args} />
 					{icon && (
 						<Icon>
-							<UIICon name={icon} />
+							<UIICon name={icon} color="PRIMARY" />
 						</Icon>
 					)}
 					{!!badge && (

@@ -25,7 +25,7 @@ export const Button: React.VFC<ButtonProps> = ({
 				</div>
 			) : (
 				<UIText preset="BUTTON" color="INHERIT">
-					{label || "Button"}
+					{label}
 				</UIText>
 			)}
 		</ButtonWrapper>

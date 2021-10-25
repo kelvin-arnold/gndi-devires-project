@@ -4,13 +4,7 @@ import {icons} from "../../theme/icon";
 import {IconWrapper} from "./Icon.styled";
 import {IconProps} from "./Icon.types";
 
-export const Icon: React.VFC<IconProps> = ({
-	name,
-	size = "sm",
-	color = "PRIMARY",
-	onClick,
-	...args
-}) => {
+export const Icon: React.VFC<IconProps> = ({name, size = "sm", color, onClick, ...args}) => {
 	// Context Here
 	// States Here
 	// Effects Here

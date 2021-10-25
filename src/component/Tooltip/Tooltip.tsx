@@ -17,7 +17,7 @@ export const Tooltip: React.VFC<TooltipProps & TooltipStyleProps> = ({
 	return (
 		<TooltipWrapper {...args}>
 			<Content {...{px, py}}>{description}</Content>
-			<UIICon name="info" />
+			<UIICon name="info" color="PRIMARY" />
 		</TooltipWrapper>
 	);
 };

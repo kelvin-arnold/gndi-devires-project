@@ -55,7 +55,7 @@ export const DatePicker = React.forwardRef<HTMLInputElement, DatePickerProps>(
 				<InputWrapper onClick={() => toggleCalendar(!isOpen)}>
 					<Input type="text" disabled value={value} placeholder="MM/DD/YYYY" />
 					<Icon>
-						<UIICon name="calendar" />
+						<UIICon name="calendar" color="PRIMARY" />
 					</Icon>
 				</InputWrapper>
 				<ReactDatePicker
@@ -69,9 +69,9 @@ export const DatePicker = React.forwardRef<HTMLInputElement, DatePickerProps>(
 						calendarIcon: null,
 						clearIcon: null,
 						// format: "dd/MM/yyyy",
-						prevLabel: <UIICon name="chevronLeft" />,
+						prevLabel: <UIICon name="chevronLeft" color="PRIMARY" />,
 						prev2Label: <></>,
-						nextLabel: <UIICon name="chevronRight" />,
+						nextLabel: <UIICon name="chevronRight" color="PRIMARY" />,
 						next2Label: <></>,
 						selectRange: range,
 						onClickDecade: () => {},

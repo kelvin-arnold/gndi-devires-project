@@ -27,10 +27,11 @@ export const ButtonWrapper = styled.button.attrs<ButtonProps>(({bp, disabled, ou
 				"text-white": bp !== "SECONDARY" && bp !== "LINK",
 				"bg-gray-disabled hover:bg-gray-disabled": disabled && bp !== "LINK",
 				"bg-primary hover:bg-primary-light": bp === "DEFAULT",
-				"bg-white border border-current text-primary hover:text-primary-light": bp === "SECONDARY",
+				"bg-white border border-current text-primary hover:text-primary-light":
+					bp === "SECONDARY" && !disabled,
 				"border-current text-gray-disabled hover:text-gray-disabled hover:bg-white":
 					bp === "SECONDARY" && disabled,
-				"min-w-0 text-primary underline hover:text-primary-light": bp === "LINK",
+				"min-w-0 text-primary underline hover:text-primary-light": bp === "LINK" && !disabled,
 				"bg-transparent text-gray-disabled hover:text-gray-disabled": bp === "LINK" && disabled,
 				"bg-red hover:bg-red-light": bp === "DANGER",
 				"bg-primary-dark hover:bg-primary": bp === "DARK",

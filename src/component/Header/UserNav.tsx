@@ -12,7 +12,7 @@ const UserNav: React.FC = () => {
 				<div className="ml-2 mr-1">
 					<UIText color="LIGHTGREY">Olá, {user?.name ?? "Camila"}</UIText>
 				</div>
-				<UIICon name="chevronDown" size="xs" />
+				<UIICon name="chevronDown" size="xs" color="PRIMARY" />
 				<Tooltipwrapper>
 					<div className="py-1 flex flex-col">
 						<UserNavItem>

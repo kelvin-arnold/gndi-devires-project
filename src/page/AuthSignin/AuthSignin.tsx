@@ -2,7 +2,7 @@
 import React from "react";
 import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
-import {CPNDatePicker, CPNTextInput} from "./../../component";
+import {CPNDatePicker, CPNTextInput, CPNTable} from "./../../component";
 import {AuthContext} from "./../../context/AuthContext";
 import {useForm} from "react-hook-form";
 
@@ -27,6 +27,56 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 	// States Here
 	const [modal, setModal] = React.useState(false);
 	// Effects Here
+	const COLUMNS = React.useMemo(
+		() => [
+			// {
+			// 	id: 1,
+			// 	columns: [
+			{
+				Header: "N° da carteirinha",
+				accessor: "cardNumber",
+			},
+			{
+				Header: "Protocolo",
+				accessor: "protocol",
+			},
+			{
+				Header: "Nome completo",
+				accessor: "name",
+			},
+			{
+				Header: "Tipo de operação",
+				accessor: "operationType",
+			},
+			{
+				Header: "Status",
+				accessor: "status",
+			},
+			// 	],
+			// },
+		],
+		[],
+	);
+
+	const DATA = React.useMemo(
+		() => [
+			{
+				cardNumber: "11270300107512160000101",
+				protocol: "111",
+				name: "Paula da Silva Borges",
+				operationType: "changePlan",
+				status: "error",
+			},
+			{
+				cardNumber: "00001023123123123121111",
+				protocol: "8758876506",
+				name: "DA JUNG HA",
+				operationType: "changePlan",
+				status: "error",
+			},
+		],
+		[],
+	);
 	// Handlers Here
 	const submit = handleSubmit((data) => console.log("data: ", data));
 	const login = () =>
@@ -43,6 +93,7 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 			<div className="mb-4">
 				<CPNTextInput label="Demo" icon="help" />
 			</div>
+			<CPNTable columns={COLUMNS} data={DATA} />
 			<button onClick={submit}>aaa</button>
 		</AuthSigninWrapper>
 	);

@@ -10,7 +10,7 @@ type ItemProps = {
  * Components
  */
 export const MenuWrapper = styled.div.attrs<ItemProps>({
-	className: "h-full bg-gray px-3 pt-7",
+	className: "h-full bg-gray px-3 py-7",
 })<ItemProps>`
 	width: 250px;
 	& .logo {
@@ -23,7 +23,7 @@ export const MenuItemWrapper = styled.div.attrs<ItemProps>({
 })<ItemProps>`
 	& > .item {
 		${({selected}) => (selected ? tw`bg-gray-light` : "")}
-		${tw`flex rounded-lg px-3 py-2 cursor-pointer hover:bg-gray-light mb-0.5`}
+		${tw`flex rounded-lg px-1 py-2 cursor-pointer hover:bg-gray-light my-0.5`}
 		& > span {
 			${tw`ml-1`}
 			line-height: 1.3rem;
@@ -36,11 +36,12 @@ export const MenuItemWrapper = styled.div.attrs<ItemProps>({
 `;
 
 export const SubMenuItemWrapper = styled.div.attrs<ItemProps>({
-	className: "flex items-center px-3 cursor-pointer rounded-lg",
+	className: "flex items-center px-1 cursor-pointer rounded-lg py-1 mb-0.5",
 })<ItemProps>`
-	height: 33px;
+	padding-left: 36px;
 	span {
 		${({selected}) => (selected ? tw`text-secondary underline` : "")}
 		${tw`hover:underline hover:text-secondary`}
+		line-height: 1.3em;
 	}
 `;

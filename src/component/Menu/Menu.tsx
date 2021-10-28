@@ -2,177 +2,12 @@
 import React from "react";
 import * as R from "ramda";
 import {MenuWrapper, MenuItemWrapper, SubMenuItemWrapper} from "./Menu.styled";
-import {MenuProps, MenuItem} from "./Menu.types";
+import {MenuProps} from "./Menu.types";
+import {MENU} from "./Menu.mock";
 import {UIICon, UIText} from "./../../ui";
 import {motion} from "framer-motion";
 import uniqid from "uniqid";
 import Logo from "./../../assets/images/img-logo-gndi.svg";
-
-const MENU: MenuItem[] = [
-	{
-		label: "Home",
-		icon: "home",
-		route: "/",
-	},
-	{
-		label: "Dados da empresa",
-		icon: "leaderBoard",
-		route: "down",
-		links: [
-			{
-				label: "Informações de cadastro",
-				route: "/",
-			},
-			{
-				label: "Gerenciar Usuários",
-				route: "/",
-			},
-			{
-				label: "Alterar senha",
-				route: "/",
-			},
-			{
-				label: "Gerenciar notificações",
-				route: "/",
-			},
-		],
-	},
-	{
-		label: "Dados do contrato",
-		icon: "description",
-		route: "down",
-		links: [
-			{
-				label: "Resumo do contrato",
-				route: "/",
-			},
-			{
-				label: "Aditivo do contrato",
-				route: "/",
-			},
-			{
-				label: "Grupo do contrato",
-				route: "/",
-			},
-			{
-				label: "Reajuste do contrato",
-				route: "/",
-			},
-			{
-				label: "Consulta do contrato",
-				route: "/",
-			},
-			{
-				label: "Cobertura do contrato",
-				route: "/",
-			},
-		],
-	},
-	{
-		label: "Dados de beneficiário",
-		icon: "user",
-		route: "down",
-		links: [
-			{
-				label: "Carteirinha",
-				route: "/",
-			},
-			{
-				label: "Beneficiários por periódo",
-				route: "/",
-			},
-			{
-				label: "Registro de acidentados",
-				route: "/",
-			},
-			{
-				label: "Autorizações",
-				route: "/",
-			},
-		],
-	},
-	{
-		label: "Movimentação cadastral",
-		icon: "swap",
-		route: "down",
-		links: [
-			{
-				label: "Adicionar beneficiário",
-				route: "/",
-			},
-			{
-				label: "Alterar beneficiário",
-				route: "/",
-			},
-			{
-				label: "Desligar beneficiário",
-				route: "/",
-			},
-			{
-				label: "Trocar o plano",
-				route: "/",
-			},
-			{
-				label: "Transferir beneficiário",
-				route: "/",
-			},
-			{
-				label: "Aposentados e demitidos",
-				route: "/",
-			},
-			{
-				label: "Movimentações pendentes",
-				route: "/",
-			},
-			{
-				label: "Movimentações por arquivo",
-				route: "/",
-			},
-		],
-	},
-	{
-		label: "Faturamento",
-		icon: "paid",
-		route: "down",
-		links: [
-			{
-				label: "Lista de faturas",
-				route: "/",
-			},
-			{
-				label: "Relatório de beneficiários",
-				route: "/",
-			},
-			{
-				label: "Relatório de sinistros",
-				route: "/",
-			},
-			{
-				label: "Centro de custo",
-				route: "/",
-			},
-		],
-	},
-	{
-		label: "Central de ajuda",
-		icon: "help",
-		route: "down",
-		links: [
-			{
-				label: "Dúvidas frequentes",
-				route: "/",
-			},
-			{
-				label: "Fale conosco",
-				route: "/",
-			},
-			{
-				label: "Consulta de solicitção",
-				route: "/",
-			},
-		],
-	},
-];
 
 export const Menu: React.VFC<MenuProps> = ({menu = MENU, ...args}) => {
 	// Context Here
@@ -212,7 +47,7 @@ export const Menu: React.VFC<MenuProps> = ({menu = MENU, ...args}) => {
 							<UIText color="WHITE">{label}</UIText>
 						</div>
 						{!R.isEmpty(links) && currentMenu === i && (
-							<motion.div>
+							<motion.div className="my-2">
 								{links.map(({label: linkLabel, route: linkRoute}, l) => (
 									<SubMenuItemWrapper
 										key={uniqid()}

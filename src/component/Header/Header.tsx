@@ -99,26 +99,26 @@ export const Header: React.VFC<HeaderProps> = ({subHeader, contractList, ...args
 							</UIText>
 						</div>
 						<UIICon name="chevronDown" color="PRIMARY" />
-						{/* {contractList && ( */}
-						<ContractWrapper>
-							{CONTRACTS.map((group) => (
-								<div className="flex flex-col" key={group.groupLabel}>
-									<UIText preset="BUTTON_02" onClick={() => console.log("group label click")}>
-										{group.groupLabel}
-									</UIText>
-									<div className="flex flex-col">
-										{group.groupList.map((contract) => (
-											<UIText
-												onClick={() => console.log("contract item label click")}
-												key={contract.label}>
-												{contract.label}
-											</UIText>
-										))}
+						{contractList && (
+							<ContractWrapper>
+								{CONTRACTS.map((group) => (
+									<div className="flex flex-col" key={group.groupLabel}>
+										<UIText preset="BUTTON_02" onClick={() => console.log("group label click")}>
+											{group.groupLabel}
+										</UIText>
+										<div className="flex flex-col">
+											{group.groupList.map((contract) => (
+												<UIText
+													onClick={() => console.log("contract item label click")}
+													key={contract.label}>
+													{contract.label}
+												</UIText>
+											))}
+										</div>
 									</div>
-								</div>
-							))}
-						</ContractWrapper>
-						{/* )} */}
+								))}
+							</ContractWrapper>
+						)}
 					</ContractMenu>
 				</SubHeaderWrapper>
 			)}

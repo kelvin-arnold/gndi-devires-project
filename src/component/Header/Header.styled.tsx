@@ -6,7 +6,7 @@ import tw from "twin.macro";
 /**
  * Components
  */
-export const HeaderWrapper = styled.div.attrs({className: "bg-white w-full"})``;
+export const HeaderWrapper = styled.div.attrs({className: "w-full"})``;
 
 export const HeaderTopWrapper = styled.div.attrs({
 	className: "flex flex-row justify-end items-center pr-3",
@@ -25,7 +25,7 @@ export const HeaderTopIconWrapper = styled.div.attrs<{end?: boolean}>(({end}) =>
 
 export const HeaderBodyWrapper = styled.div.attrs({
 	className:
-		"w-full border-t border-b border-gray-light border-opacity-20 h-9 flex flex-row items-center justify-between px-7",
+		"w-full bg-white border-t border-b border-gray-light border-opacity-20 h-9 flex flex-row items-center justify-between px-7",
 })``;
 
 export const NotificationIconWrapper = styled.div.attrs({
@@ -83,6 +83,29 @@ export const UserNavItem = styled.div.attrs({
 	& {
 		width: 240px;
 	}
+
+	& * {
+		text-decoration: none;
+	}
+`;
+
+export const SubHeaderWrapper = styled.div.attrs({
+	className: "px-7 py-7 border-b border-gray-light border-opacity-20 flex justify-between",
+})``;
+
+export const ContractMenu = styled.div.attrs({
+	className: "flex items-center relative cursor-pointer",
+})`
+	&:hover .contract_list {
+		opacity: 1;
+	}
+`;
+
+export const ContractWrapper = styled.div.attrs({
+	className:
+		"absolute right-0 bg-white p-2 rounded border border-gray-light border-opacity-60 shadow contract_list opacity-0",
+})`
+	top: 72px;
 
 	& * {
 		text-decoration: none;

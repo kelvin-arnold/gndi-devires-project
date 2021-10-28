@@ -9,6 +9,7 @@ export const Card: React.VFC<CardProps> = ({
 	type,
 	leftIcon,
 	title,
+	titleColor,
 	description,
 	actions,
 	accordionContent,
@@ -37,7 +38,11 @@ export const Card: React.VFC<CardProps> = ({
 						</IconWrapper>
 					)}
 					<div className="flex flex-col items-start">
-						{title && <UIText preset="HEADLINE_06">{title}</UIText>}
+						{title && (
+							<UIText preset="HEADLINE_06" color={titleColor}>
+								{title}
+							</UIText>
+						)}
 						{description && (
 							<UIText preset="BODY_02" color="GREY">
 								{description}

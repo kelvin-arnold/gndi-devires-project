@@ -1,5 +1,6 @@
 import {icons} from "../../theme/icon";
 import {Color} from "../../ui/Icon/Icon.types";
+import {Color as TextColor} from "../../ui/Text/Text.types";
 
 // Component generated with util/vox-create-component.js
 export type Action = {
@@ -21,6 +22,7 @@ export type CardProps = {
 	};
 	readonly accordionContent?: string;
 	readonly actions?: Action[];
-	readonly type?: "LINK" | "LIST" | "ACCORDION";
+	readonly type?: "LINK" | "LIST" | "ACCORDION" | "SELECT";
 	readonly onClick?: (props?: any) => void;
+	readonly titleColor?: keyof typeof TextColor;
 };

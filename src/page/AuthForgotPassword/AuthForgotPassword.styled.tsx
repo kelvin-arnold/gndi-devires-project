@@ -4,6 +4,4 @@ import styled from "styled-components";
 /**
  * Components
  */
-export const ContainerWrapper = styled.div.attrs({
-	className: "w-screen",
-})``;
+export const AuthForgotPasswordWrapper = styled.div``;

@@ -33,7 +33,7 @@ const Router: React.VFC = () => {
 	if (signed) {
 		return (
 			<BrowserRouter>
-				<div className="app-container flex w-full">
+				<div className="app-container flex w-full bg-gray-lightest">
 					<div className="app-menu">
 						<CPNMenu />
 					</div>

@@ -17,3 +17,4 @@ export {default as CPNHeader} from "./Header/Header";
 export {default as CPNMenu} from "./Menu/Menu";
 export {default as CPNDatePicker} from "./DatePicker/DatePicker";
 export {default as CPNTable} from "./Table/Table";
+export {default as CPNChart} from "./Chart/Chart";

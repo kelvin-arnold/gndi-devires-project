@@ -3,7 +3,12 @@ export const MENU: MenuItem[] = [
 	{
 		label: "Home",
 		icon: "home",
-		route: "/",
+		route: "/AppHome",
+	},
+	{
+		label: "Dados da congênere",
+		icon: "leaderBoard",
+		route: "/AppUserLogs",
 	},
 	// {
 	// 	label: "Dados da empresa",
@@ -66,15 +71,23 @@ export const MENU: MenuItem[] = [
 		links: [
 			{
 				label: "Consultar beneficiario",
-				route: "/",
+				route: "/AppBeneficiary",
 			},
 			{
-				label: "Carteirinha",
-				route: "/",
+				label: "Inclusão de carteirinha",
+				route: "/AppHealthCard",
+			},
+			{
+				label: "Solicitação de carteirinha",
+				route: "/AppReqHealthCard",
+			},
+			{
+				label: "Lista de solicitações",
+				route: "/AppRequestList",
 			},
 			{
 				label: "Beneficiário por congênere",
-				route: "/",
+				route: "/AppExtractionReport",
 			},
 		],
 	},
@@ -85,15 +98,15 @@ export const MENU: MenuItem[] = [
 		links: [
 			{
 				label: "Arquivo de movimentação",
-				route: "/",
+				route: "/AppFilesMovements",
 			},
 			{
 				label: "Arquivo de retorno",
-				route: "/",
+				route: "/AppUploadFiles",
 			},
 			{
 				label: "Consultar envíos",
-				route: "/",
+				route: "/AppFilesShipments",
 			},
 			// {
 			// 	label: "Trocar o plano",

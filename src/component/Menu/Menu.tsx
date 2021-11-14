@@ -6,27 +6,37 @@ import {MenuProps} from "./Menu.types";
 import {MENU} from "./Menu.mock";
 import {UIICon, UIText} from "./../../ui";
 import {motion} from "framer-motion";
+import {useHistory} from "react-router-dom";
 import uniqid from "uniqid";
 import Logo from "./../../assets/images/img-logo-gndi.svg";
 
 export const Menu: React.VFC<MenuProps> = ({menu = MENU, ...args}) => {
+	const history = useHistory();
 	// Context Here
 	// States Here
 	const [currentMenu, setCurrentMenu] = React.useState<number>();
-	const [subMenu, setSubMenu] = React.useState<number>();
-	// Effects Here
+	const [subMenu, setSubMenu] = React.useState<string>(window.location.pathname);
 	// Handlers Here
-	const navigate = (route: string) => console.log("Navigate: ", route);
+	const navigate = React.useCallback(
+		(route: string) => {
+			setSubMenu(route);
+			history.push(route);
+		},
+		[history],
+	);
 	const toggleMenu = (route: string, i: number) => {
 		setCurrentMenu(i);
 		if (route === "down") {
 			const defaultSubLink = menu[i].links;
-			setSubMenu(0);
 			navigate(defaultSubLink ? defaultSubLink[0].route : "/");
 		} else {
 			navigate(route);
 		}
 	};
+	// Effects Here
+	React.useEffect(() => {
+		navigate("/");
+	}, [navigate]);
 	return (
 		<MenuWrapper {...args}>
 			<div className="logo">
@@ -37,7 +47,10 @@ export const Menu: React.VFC<MenuProps> = ({menu = MENU, ...args}) => {
 					<MenuItemWrapper
 						key={uniqid()}
 						selected={i === currentMenu}
-						onClick={() => toggleMenu(route, i)}>
+						onClick={(e) => {
+							e.preventDefault();
+							toggleMenu(route, i);
+						}}>
 						<div className="item">
 							{icon && (
 								<div className="icon">
@@ -51,11 +64,11 @@ export const Menu: React.VFC<MenuProps> = ({menu = MENU, ...args}) => {
 								{links.map(({label: linkLabel, route: linkRoute}, l) => (
 									<SubMenuItemWrapper
 										key={uniqid()}
-										onClick={() => {
+										onClick={(e) => {
+											e.stopPropagation();
 											navigate(linkRoute);
-											setSubMenu(l);
 										}}
-										selected={l === subMenu}>
+										selected={linkRoute === subMenu}>
 										<UIText preset="BODY_02" color="WHITE">
 											{linkLabel}
 										</UIText>

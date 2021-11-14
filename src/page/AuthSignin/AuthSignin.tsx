@@ -2,7 +2,7 @@
 import React from "react";
 import {AuthSigninWrapper} from "./AuthSignin.styled";
 import {AuthSigninProps} from "./AuthSignin.types";
-import {CPNDatePicker, CPNTextInput, CPNMenu, CPNChart} from "./../../component";
+import {UIButton} from "./../../ui";
 import {AuthContext} from "./../../context/AuthContext";
 import {useForm} from "react-hook-form";
 
@@ -84,13 +84,8 @@ export const AuthSignin: React.VFC<AuthSigninProps> = ({...args}) => {
 	// Component
 	return (
 		<AuthSigninWrapper {...args}>
-			<div className="mb-4">
-				<CPNChart
-					labels={["Movitmentações recebidas", "Movitmentações pendentes", "Registros rejeitados"]}
-					title="80"
-					subtitle="total"
-					values={[12, 38, 50]}
-				/>
+			<div>
+				<UIButton onClick={login} label="login" />
 			</div>
 		</AuthSigninWrapper>
 	);
